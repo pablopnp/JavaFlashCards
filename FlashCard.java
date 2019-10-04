@@ -13,14 +13,20 @@ public class FlashCard {
 
 	public static void main(String [] flashcard) {
 		
+		// Variable initiation;
+
 		int start = 0;
 		int dice = 0;
+		
+		// Random Number 1-50 generator;
 		
 		Random r = new Random();
 		dice = r.nextInt(50) + 1;
 		
+		// Variable Arrays declarations;
+		
 		String termDefinition[] = {"Indicates that the details of a class, a method, or an interface are given elsewhere in the code.", "Tests the truth of a condition that the programmer believes is true.", "Indicates that a value is either true or false.", "Jumps out of a loop or switch.", "Indicates that a value is an 8-bit whole number.", "Introduces one of several possible paths of execution in a switch statement.", "Introduces statements that are executed when something interrupts the flow of execution in a try clause.", "Indicates that a value is a character (a single letter, digit, punctuation symbol, and so on) stored in 16 bits of memory.", "Introduces a class — a blueprint for an object.", "You can’t use this word in a Java program. The word has no meaning but, because it’s a keyword, you can’t create a variable named const.", "Forces the abrupt end of the current loop iteration and begins another iteration.", "Introduces a path of execution to take when no case is a match in a switch statement.", "Causes the computer to repeat some statements over and over again (for instance, as long as the computer keeps getting unacceptable results).", "Indicates that a value is a 64-bit number with one or more digits after the decimal point.", "Introduces statements that are executed when the condition in an if statement isn’t true.", "Creates a newly defined type — a group of values that a variable can have.", "Creates a subclass — a class that reuses functionality from a previously defined class.", "Indicates that a variable’s value cannot be changed, that a class’s functionality cannot be extended, or that a method cannot be overridden.", "Introduces the last will and testament of the statements in a try clause.", "Indicates that a value is a 32-bit number with one or more digits after the decimal point.", "Gets the computer to repeat some statements over and over again (for instance, a certain number of times).", "You can’t use this word in a Java program. The word has no meaning. Because it’s a keyword, you can’t create a variable named goto.", "Tests to see whether a condition is true. If it’s true, the computer executes certain statements; otherwise, the computer executes other statements.", "Indicates that a class provides bodies for methods whose headers are declared in an interface.", "Enables the programmer to abbreviate the names of classes defined in a package.", "Tests to see whether a certain object comes from a certain class.", "Indicates that a value is a 32-bit whole number.", "Introduces an interface. An interface is like a class but, for the most part, an interface’s methods have no bodies.", "Indicates that a value is a 64-bit whole number.", "Enables the programmer to use code that was written in a language other than Java.", "Creates an object from an existing class.", "Puts the code into a package — a collection of logically related definitions.", "Indicates that a variable or method can be used only within a certain class.", "Indicates that a variable or method can be used in subclasses from another package.", "Indicates that a variable, class, or method can be used by any other Java code.", "Ends execution of a method and possibly returns a value to the calling code.", "Indicates that a value is a 16-bit whole number.", "Indicates that a variable or method belongs to a class, rather than to any object created from the class.", "Limits the computer’s ability to represent extra large or extra small numbers when the computer does intermediate calculations on float and double values.", "Refers to the superclass of the code in which the word super appears.", "Tells the computer to follow one of many possible paths of execution (one of many possible cases), depending on the value of an expression.", "Keeps two threads from interfering with one another.", "A self-reference — refers to the object in which the word this appears.", "Creates a new exception object and indicates that an exceptional situation (usually something unwanted) has occurred.", "Indicates that a method or constructor may pass the buck when an exception is thrown.", "Indicates that, if and when an object is serialized, a variable’s value doesn’t need to be stored.", "Introduces statements that are watched (during runtime) for things that can go wrong.", "Indicates that a method doesn’t return a value.", "Imposes strict rules on the use of a variable by more than one thread at a time.", "Repeats some statements over and over again (as long as a condition is still true)."};
-		String varDefinition[] = {"Abstract", "Assert", "Boolean", "Break", "Byte", "Case", "Catch", "Char", "Class", "Const", "Continue", "Default", "Do", "Double", "Else", "Enum", "Extends", "Final", "Finally", "Float", "For", "Goto", "If", "Implements", "Import", "Instanceof", "Int", "Interface", "Long", "Native", "New", "Package", "Private", "Protected", "Public", "Return", "Short", "Static", "Strictfp", "Super", "Switch", "Synchronized", "This", "Throw", "Throws", "Transient", "Try", "Void", "Volatile", "While"};
+		String varDefinition[] = {"Abstract", "Assert", "Boolean", "Break", "Byte", "Case", "Catch", "Char", "Class", "Const", "Continue", "Default", "Do", "Double", "Else", "Enum", "Extends", "Final", "Finally", "Float", "For", "Goto", "If", "Implements", "Import", "Instanceof", "Int", "Interface", "Long", "Native", "New", "Package", "Private", "Protected", "Public", "Return", "Short", "Static", "Strictfp", "Super", "Switch", "Synchronized", "This", "Throw", "Throws", "Transient", "Try", "Void", "Volatile", "While",};
 
 		
 		// Variable declarations;
@@ -129,19 +135,23 @@ public class FlashCard {
 		varVolatile = "Imposes strict rules on the use of a variable by more than one thread at a time.";
 		varWhile = "Repeats some statements over and over again (as long as a condition is still true).";
 		
-		 
+		// Presents the definition based on a random choice;
+ 
 		System.out.println("What Keyword matches the following definition: " + "\n");
 		
 		System.out.println(termDefinition[dice]);
 		
+		// Awaits input from the user;
+		
 		Scanner keywordAnswer = new Scanner(System.in);
 		String wordMatch = keywordAnswer.nextLine();
-	
+		
+		// Compares definition with answer and replies accordingly. If incorrect, provies correct answer;
 		
 		if (wordMatch.equals (varDefinition[dice])){
 			System.out.println("Genius!");
 		}else{
-			System.out.println("Wrong Answer!");
+			System.out.println("Wrong Answer! It should be: " + varDefinition[dice]);
 		}
 		 
 		
